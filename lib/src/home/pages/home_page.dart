@@ -116,53 +116,54 @@ class HomePage extends StatelessWidget {
           // HomeStarter Section: Introduction
           HomeStarter(
             id: item.id,
-            title: "Explore Key Features or Benefits",
+            title:
+                "Give us one Resume and Cover Letter and we'll do all the work for finding you a job.",
             subtitle:
-                "Submit your resume and cover letter only once. Apply automatically and get reports. Look for the best opportunities passively.",
+                "Automatically apply and get statistics about your journey.",
           ),
 
           // HomeFeatures Section: Key Features
           HomeFeatures(
             id: item.id,
-            title: 'Key Features',
+            title: 'Apply everywhere, once.',
             subtitle:
-                'Explore Why Our Product is the Ideal Solution for Your Needs',
+                'See how Job-Genie can save you time and increase your odds of getting your dream job.',
             cards: const [
               CardModel(
                 source: 'assets/image/icon_inactive_faq.svg',
-                title: "Discover the World's Wonders",
+                title: "Bypadd the Filters",
                 subtitle:
-                    'Embark on a mesmerizing journey to breathtaking destinations and uncover the hidden gems that make our planet truly extraordinary. 🚀',
+                    'Hate keyword filters? We automatically adjust your resume to bypass likely filters by adjusting simple keywords, ensuring a real human sees your application.',
               ),
               CardModel(
                 source: 'assets/image/icon_inactive_features.svg',
-                title: 'Unleash Your Creativity',
+                title: 'Skip the Repetition',
                 subtitle:
-                    'Ignite your creative spark and let your imagination run wild with our vast collection of inspiring content, designed to fuel your artistic passions. 🎨',
+                    "Sick of reading vague company descriptions to answer repetitive questions? We automatically adjust your cover letter and subsidiary questions to match online sentiment about a company.",
               ),
               CardModel(
                 source: 'assets/image/icon_inactive_pricing.svg',
-                title: 'Elevate Your Taste Buds',
+                title: 'Get Informed',
                 subtitle:
-                    'Indulge in a delectable culinary journey that tantalizes your palate, as we guide you through a world of flavors and culinary adventures. 🍰',
+                    'Scared of interviews? We send you information about what a company says about itself and what people are saying about that company.',
               ),
               CardModel(
                 source: 'assets/image/icon_inactive_faq.svg',
-                title: 'Master Your Fitness Journey',
+                title: 'See How You Are Doing',
                 subtitle:
-                    'Take control of your health and wellness goals with our expert guidance, tailored workouts, and nutrition tips to help you achieve the best version of yourself. 🏸',
+                    'Want to see if it is just you getting rejected? See how your application is doing relative to other people with similar experience applying for the same roles and your likelihood of getting future jobs.',
               ),
               CardModel(
                 source: 'assets/image/icon_inactive_features.svg',
-                title: 'Unlock Adventure Awaits',
+                title: 'Pay Us When You Get Paid',
                 subtitle:
-                    'Embark on thrilling adventures and create unforgettable moments as we guide you through an exciting world of experiences, from adrenaline-pumping escapades to serene getaways. 🏔',
+                    'Trying to avoid monthly costs? We only get paid when you accept an offer, making us incentivized to get you the best job possible.',
               ),
               CardModel(
                 source: 'assets/image/icon_inactive_pricing.svg',
-                title: 'Stay Informed and Inspired',
+                title: 'Apply Passively',
                 subtitle:
-                    'Get the latest news, insights, and motivation from our team of experts and thought leaders. Stay informed, stay inspired, and stay ahead of the curve. 🗞',
+                    'Constantly looking for greener pastures? We automatically search for the best roles matching your criteria.',
               ),
             ],
           ),
