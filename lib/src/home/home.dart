@@ -11,6 +11,7 @@ import 'package:seo/seo.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../../utils/BaseAPI.dart';
 import 'package:http/http.dart' as http;
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 part 'pages/home_page.dart';
 part 'pages/home_faq_section.dart';

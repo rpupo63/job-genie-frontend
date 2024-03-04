@@ -10,7 +10,7 @@ class BaseAPI {
   Uri pillsPath = Uri.parse("$api/pills");
   Uri questionnairePath = Uri.parse("$api/questionnaire");
   Uri savingsPath = Uri.parse("$api/savings");
-  Uri waitlistPath = Uri.parse("$api/savings");
+  Uri waitlistPath = Uri.parse("$api/signup");
   // more routes
   Map<String, String> headers = {
     "Content-Type": "application/json; charset=UTF-8"

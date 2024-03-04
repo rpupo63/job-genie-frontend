@@ -8,7 +8,7 @@ class Background extends StatelessWidget {
     this.imageColor,
     this.fit = BoxFit.cover,
     this.alignment = Alignment.center,
-    this.source = 'assets/image/background.png',
+    this.source = 'assets/image/background.jpeg',
     required this.child,
   }) : builder = null;
 
@@ -73,8 +73,8 @@ class Background extends StatelessWidget {
                 return RepaintBoundary(
                   child: DImage(
                       alignment: Alignment(0.0, -1.0 + position),
-                      source: 'assets/image/background.png',
-                      fit: BoxFit.fitWidth,
+                      source: 'assets/image/background.jpeg',
+                      fit: BoxFit.cover,
                       colorBlendMode: BlendMode.hardLight,
                       color: context.color.primary),
                 );

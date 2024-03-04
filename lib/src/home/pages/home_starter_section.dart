@@ -15,33 +15,103 @@ class HomeStarter extends StatefulWidget {
 }
 
 class _HomeStarterState extends State<HomeStarter> {
+  FirebaseFirestore firestore = FirebaseFirestore.instance;
   late TextEditingController emailController;
-
-  Future<void> recordEmail(String userEmail) async {
-    final response = await http.post(BaseAPI().waitlistPath,
-        headers: {"Content-Type": "application/json"},
-        body: json.encode({"email": userEmail}));
-
-    if (response.statusCode == 200) {
-      // Handle success (e.g., show a success message)
-      print("Nice-u");
-    } else {
-      // Handle error (e.g., show an error message)
-      print("Buttcheeks");
-    }
-  }
 
   @override
   void initState() {
     super.initState();
-    emailController = TextEditingController();
+    emailController = TextEditingController(); // Initialize the controller here
   }
 
   @override
   void dispose() {
-    emailController.dispose();
+    emailController.dispose(); // Don't forget to dispose of the controller
     super.dispose();
   }
+
+  CollectionReference signups = FirebaseFirestore.instance.collection('emails');
+
+  Future<void> recordEmail(TextEditingController email) {
+    String emailAddy = email.text;
+    // Call the user's CollectionReference to add a new user
+    return signups
+        .add({
+          'email': emailAddy, // John Doe
+        })
+        .then((value) => showDialog(
+              context: context,
+              builder: (context) => AlertDialog(
+                title: Text(
+                    'You have succesfully registered for the waiting list.'),
+                actions: [
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                      child: Text('Go Back'))
+                ],
+                iconColor: Colors.amber,
+              ),
+            ))
+        .catchError((error) => print("Failed to add user: $error"));
+  }
+/*
+  Future<http.Response> signup(
+    String email,
+  ) async {
+    var body = jsonEncode({
+      'firstName': "jobgenie",
+      'lastName': "jobgenie",
+      'email': email,
+      'phone': "jobgenie",
+      'password': "jobgenie",
+    });
+    http.Response response = await http.post(BaseAPI().waitlistPath,
+        headers: BaseAPI().headers, body: body);
+    return response;
+  }
+
+  Future<void> recordEmail() async {
+    // Use the text property to get the string value from the controllers
+    var req = await signup(
+      emailController.text,
+    );
+
+    print(req.statusCode);
+    if (req.statusCode == 200) {
+      const SnackBar(content: Text('Email succesfully registered.'));
+      showDialog(
+        context: context,
+        builder: (context) => AlertDialog(
+          title: Text('You have succesfully registered for the waiting list.'),
+          actions: [
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                child: Text('Go Back'))
+          ],
+          iconColor: Colors.amber,
+        ),
+      );
+    } else {
+      showDialog(
+        context: context,
+        builder: (context) => AlertDialog(
+          title: Text('Problem registering'),
+          actions: [
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                child: Text('Go Back'))
+          ],
+          iconColor: Colors.amber,
+        ),
+      );
+    }
+  }*/
 
   @override
   Widget build(BuildContext context) {
@@ -232,7 +302,7 @@ class _HomeStarterState extends State<HomeStarter> {
                       onTap: () {}),
                   // Display "Join Waitlist" button
                   suffixIcon: DButton.text(
-                    onTap: () => recordEmail(emailController.toString()),
+                    onTap: () => recordEmail(emailController),
                     text: 'Join Waitlist',
                     padding: const EdgeInsets.symmetric(
                       horizontal: Constants.spacing,
