@@ -30,9 +30,10 @@ class _HomeStarterState extends State<HomeStarter> {
     super.dispose();
   }
 
-  CollectionReference signups = FirebaseFirestore.instance.collection('emails');
-
   Future<void> recordEmail(TextEditingController email) {
+    CollectionReference signups =
+        FirebaseFirestore.instance.collection('emails');
+
     String emailAddy = email.text;
     // Call the user's CollectionReference to add a new user
     return signups
@@ -42,7 +43,7 @@ class _HomeStarterState extends State<HomeStarter> {
         .then((value) => showDialog(
               context: context,
               builder: (context) => AlertDialog(
-                title: Text(
+                title: const Text(
                     'You have succesfully registered for the waiting list.'),
                 actions: [
                   ElevatedButton(
