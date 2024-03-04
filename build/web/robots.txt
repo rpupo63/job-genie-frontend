@@ -1,4 +1,0 @@
-User-agent: *
-Disallow: 
-
-Sitemap: https://raw.githubusercontent.com/Nialixus/flutter_landing_page/main/web/sitemap.xml
