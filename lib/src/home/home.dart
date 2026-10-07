@@ -1,4 +1,4 @@
-import 'dart:convert';
+//import 'dart:convert';
 
 import 'package:dart_fusion/dart_fusion.dart';
 import 'package:flutter/material.dart' hide NavigationDrawer;
@@ -8,9 +8,9 @@ import 'package:go_router/go_router.dart';
 import 'package:scroll_to_id/scroll_to_id.dart';
 import 'package:card_swiper/card_swiper.dart';
 import 'package:seo/seo.dart';
-import 'package:url_launcher/url_launcher.dart';
-import '../../utils/BaseAPI.dart';
-import 'package:http/http.dart' as http;
+//import 'package:url_launcher/url_launcher.dart';
+//import '../../utils/BaseAPI.dart';
+//import 'package:http/http.dart' as http;
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 part 'pages/home_page.dart';
