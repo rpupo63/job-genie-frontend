@@ -27086,7 +27086,7 @@ _.d=d},
 aTX(a){var s=null,r=new A.CQ(A.Sp(s,s),A.vw(!0,s,!0,!0,s,s,!1),a,$.ax())
 r.a6V(a)
 return r},
-aEL(a,b,c,d){return new A.zY(b,null,d,"assets/image/background.svg",c,a,null)},
+aEL(a,b,c,d){return new A.zY(b,null,d,"assets/image/background.jpeg",c,a,null)},
 aQB(a){return new A.zY(a,new A.a5e(),0.25,"",B.iv,B.D,null)},
 aHo(a){return new A.PO(a,null)},
 aHp(a,b){var s=null
@@ -92140,7 +92140,7 @@ s.toString
 q=B.b.gam(q).at
 q.toString
 r=s>0?q/s*2:0}else r=0
-return new A.dp(A.MQ(new A.ei(0,-1+r),A.O(a).ay.b,B.fa,B.iv,null,"assets/image/background.svg",t.N),null)},
+return new A.dp(A.MQ(new A.ei(0,-1+r),A.O(a).ay.b,B.fa,B.iv,null,"assets/image/background.jpeg",t.N),null)},
 $C:"$3",
 $R:3,
 $S:515}
